@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
+
 class ListViewWidget extends StatelessWidget {
+//  items :List<String>.generate(100,(i)=>"Item $i");
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -8,8 +11,8 @@ class ListViewWidget extends StatelessWidget {
       body: Container(
         margin: EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 0.0),
         width: 375.0,
-        height: 60.0,
-        child:MyListView(),
+        height: 10000.0,
+        child:ListView_builderWidget(),
       ),
     );
   }
@@ -17,6 +20,12 @@ class ListViewWidget extends StatelessWidget {
 
 //列表视图
 class MyListView extends StatelessWidget {
+//  final List<String> items;
+//  ListViewWidget({
+//    Key key,
+//    @required this.items
+//}).super(key : key);
+
   @override
   Widget build(BuildContext context) {
     return ListView(
@@ -31,3 +40,17 @@ class MyListView extends StatelessWidget {
     );
   }
 }
+
+
+//自定义cell的listView
+class ListView_builderWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ListView.builder(
+        itemCount: 1000,
+        itemBuilder: (context,index){
+      return ListTile(title: Text("item $index"));
+    });
+  }
+}
+
