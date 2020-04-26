@@ -4,7 +4,7 @@ import 'containerWidget.dart';//界面
 import 'imageWidget.dart';//图片
 import 'listViewWidget.dart';//列表
 import 'gridviewWidget.dart';//网格图
-
+import 'myRowWidget.dart';//横向布局
 
 void main()=> runApp(MyApp(
 ));
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "MyApp",
-      home: GridviewWidget(),
+      home: RowWidget(),
     );
   }
 }
